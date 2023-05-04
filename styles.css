@@ -2,3 +2,9 @@ body {
     background-color: black;
     color: white;
 }
+
+.content {
+    max-width: 500px;
+    margin: 0 auto;
+    align-items: center;
+}
