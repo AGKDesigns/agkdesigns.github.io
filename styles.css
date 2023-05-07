@@ -4,6 +4,11 @@ body {
     font-family: 'Chakra Petch', sans-serif;
 }
 
+a {
+    color: orange;
+}
+
+
 .content {
     max-width: 500px;
     margin: 0 auto;
