@@ -3,16 +3,17 @@
       {
         "id": "company1",
         "widgetData": {
-          "title": "Company One Insights",
-          "content": "Here is some information about Company One."
+          "title": "Title of Company One",
+          "content": "Content about Company One"
         }
       },
       {
         "id": "company2",
         "widgetData": {
-          "title": "Company Two Insights",
-          "content": "Important news about Company Two."
+          "title": "Title of Company Two",
+          "content": "Content about Company Two"
         }
       }
     ]
   }
+  
