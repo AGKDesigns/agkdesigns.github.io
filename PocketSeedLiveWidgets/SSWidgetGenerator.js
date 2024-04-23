@@ -45,8 +45,8 @@ function loadWidget(companyId) {
             
             
 
-            document.body.appendChild(widget);
             
+            document.getElementById('custom-widget-container').appendChild(widget);
         })
         .catch(error => console.error('Error loading the data:', error));
     });
