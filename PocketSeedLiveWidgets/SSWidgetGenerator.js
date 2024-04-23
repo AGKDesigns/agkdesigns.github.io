@@ -1,9 +1,7 @@
 function loadWidget(companyId) {
     document.addEventListener("DOMContentLoaded", function() {
-        // Dynamically load the CSS file
-        loadCSS('widget-styles.css');
-
         const url = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/ImpactDataFile.json';
+
         fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -14,48 +12,37 @@ function loadWidget(companyId) {
             }
 
             const widget = document.createElement('div');
-            widget.className = 'widget';
-
-            const imgContainer = document.createElement('div');
-            imgContainer.className = 'imgContainer';
-
-            const textContainer = document.createElement('div');
-            textContainer.className = 'textContainer';
+            widget.style.padding = '10px';
+            widget.style.margin = '10px';
+            widget.style.border = '1px solid #ccc';
+            widget.style.borderRadius = '5px';
+            widget.style.backgroundColor = '#f9f9f9';
+            widget.style.color = '#333';
+            widget.style.fontFamily = 'Arial, sans-serif';
+            
+            
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
-            title.className = 'title';
 
             const content = document.createElement('p');
             content.textContent = companyData.widgetData.content;
-
-            const info = document.createElement('p');
-            info.textContent = companyData.widgetData.info;
+            content.style.color = 'blue'; // Specific color for the paragraph text
 
             const img = document.createElement('img');
-            img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; 
-            img.alt = 'Descriptive text';
+            img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; // Replace with your image URL
+            img.alt = 'Descriptive text'; // Alternative text for the image
+            img.style.width = '100px'; // Optional: Set the width of the image
+            img.style.height = 'auto'; // Optional: Set the height to auto to maintain aspect ratio
 
-            widget.appendChild(imgContainer);
-            widget.appendChild(textContainer);
-            imgContainer.appendChild(img);
-            textContainer.appendChild(title);
-            textContainer.appendChild(content);
-            textContainer.appendChild(info);
-            
-            
 
-            
+
+            widget.appendChild(title);
+            widget.appendChild(content);
+            widget.appendChild(img);
+
             document.getElementById('custom-widget-container').appendChild(widget);
         })
         .catch(error => console.error('Error loading the data:', error));
-    });
-}
-
-function loadCSS(href) {
-    const link = document.createElement('link');
-    link.href = href;
-    link.type = 'text/css';
-    link.rel = 'stylesheet';
-    document.head.appendChild(link);
+    })
 }
