@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Widget</title>
+    <style>
+        .widget {
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 300px;
+            margin: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .widget h1 {
+            color: #333;
+            font-size: 18px;
+        }
+        .widget p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="widget-container"></div>
+
+    <script>
+        function loadWidget(companyId) {
+            const url = 'https://yourwebsite.com/data/companies.json'; // Change this URL to your JSON file location
+
+            fetch(url)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const companyData = data.companies.find(company => company.id === companyId);
+                if (companyData) {
+                    const widget = document.createElement('div');
+                    widget.className = 'widget';
+                    
+                    const title = document.createElement('h1');
+                    title.textContent = companyData.name;
+
+                    const info = document.createElement('p');
+                    info.textContent = companyData.info;
+
+                    widget.appendChild(title);
+                    widget.appendChild(info);
+
+                    document.getElementById('widget-container').appendChild(widget);
+                } else {
+                    console.error('Company not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+        }
+
+        // Example: loadWidget('company1');
+    </script>
+</body>
+</html>
