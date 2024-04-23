@@ -32,6 +32,6 @@ function loadWidget(companyId) {
             document.body.appendChild(widget);
         })
         .catch(error => console.error('Error loading the data:', error));
-    });
+    })
 }
 </script>
