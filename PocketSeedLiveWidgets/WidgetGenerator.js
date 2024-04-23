@@ -36,8 +36,8 @@ function loadWidget(companyId) {
             img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; 
             img.alt = 'Descriptive text';
 
-            widget.appendChild(textContainer);
             widget.appendChild(imgContainer);
+            widget.appendChild(textContainer);
             imgContainer.appendChild(img);
             textContainer.appendChild(title);
             textContainer.appendChild(content);
