@@ -19,6 +19,8 @@ function loadWidget(companyId) {
             widget.style.backgroundColor = '#f9f9f9';
             widget.style.color = '#333';
             widget.style.fontFamily = 'Arial, sans-serif';
+            widget.style.p.color = '#33f';
+            
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
