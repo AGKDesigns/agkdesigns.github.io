@@ -24,12 +24,22 @@ function loadWidget(companyId) {
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
+
             const content = document.createElement('p');
             content.textContent = companyData.widgetData.content;
             content.style.color = 'blue'; // Specific color for the paragraph text
 
+            const img = document.createElement('img');
+            img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; // Replace with your image URL
+            img.alt = 'Descriptive text'; // Alternative text for the image
+            img.style.width = '100px'; // Optional: Set the width of the image
+            img.style.height = 'auto'; // Optional: Set the height to auto to maintain aspect ratio
+
+
+
             widget.appendChild(title);
             widget.appendChild(content);
+            widget.appendChild(img);
 
             document.body.appendChild(widget);
         })
