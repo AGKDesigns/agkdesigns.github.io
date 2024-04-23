@@ -19,13 +19,14 @@ function loadWidget(companyId) {
             widget.style.backgroundColor = '#f9f9f9';
             widget.style.color = '#333';
             widget.style.fontFamily = 'Arial, sans-serif';
-            widget.style.p.color = '#33f';
+            
             
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
             const content = document.createElement('p');
             content.textContent = companyData.widgetData.content;
+            content.style.color = 'blue'; // Specific color for the paragraph text
 
             widget.appendChild(title);
             widget.appendChild(content);
