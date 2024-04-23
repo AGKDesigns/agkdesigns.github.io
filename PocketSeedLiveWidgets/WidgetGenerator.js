@@ -1,4 +1,3 @@
-<script>
 function loadWidget(companyId) {
     document.addEventListener("DOMContentLoaded", function() {
         const url = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/ImpactDataFile.json';
@@ -34,4 +33,3 @@ function loadWidget(companyId) {
         .catch(error => console.error('Error loading the data:', error));
     })
 }
-</script>
