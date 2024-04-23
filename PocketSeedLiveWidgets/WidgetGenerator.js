@@ -1,7 +1,7 @@
 <script>
 function loadWidget(companyId) {
     document.addEventListener("DOMContentLoaded", function() {
-        const url = 'https://agkdesigns.github.io/pocketseedlivewidgets/impactdatafile.json';
+        const url = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/ImpactDataFile.json';
 
         fetch(url)
         .then(response => response.json())
