@@ -16,6 +16,12 @@ function loadWidget(companyId) {
             const widget = document.createElement('div');
             widget.className = 'widget';
 
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'imgContainer';
+
+            const textContainer = document.createElement('div');
+            textContainer.className = 'textContainer';
+
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
             title.className = 'title';
@@ -30,10 +36,14 @@ function loadWidget(companyId) {
             img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; 
             img.alt = 'Descriptive text';
 
-            widget.appendChild(title);
-            widget.appendChild(content);
-            widget.appendChild(img);
-            widget.appendChild(info);
+            widget.appendChild(textContainer);
+            widget.appendChild(imgContainer);
+            imgContainer.appendChild(img);
+            textContainer.appendChild(title);
+            textContainer.appendChild(content);
+            textContainer.appendChild(info);
+            
+            
 
             document.body.appendChild(widget);
         })
