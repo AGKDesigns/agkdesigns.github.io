@@ -1,0 +1,23 @@
+/* widget-styles.css */
+.widget {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+
+.widget h2 {
+    /* If you need specific styles for the title */
+}
+
+.widget p {
+    color: blue; /* Specific color for the paragraph text */
+}
+
+.widget img {
+    width: 100px;
+    height: auto;
+}
