@@ -1,0 +1,18 @@
+{
+    "companies": [
+      {
+        "id": "company1",
+        "widgetData": {
+          "title": "Company One Insights",
+          "content": "Here is some information about Company One."
+        }
+      },
+      {
+        "id": "company2",
+        "widgetData": {
+          "title": "Company Two Insights",
+          "content": "Important news about Company Two."
+        }
+      }
+    ]
+  }
