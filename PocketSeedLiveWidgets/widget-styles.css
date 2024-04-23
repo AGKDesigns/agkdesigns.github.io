@@ -21,3 +21,8 @@
     width: 100px;
     height: auto;
 }
+
+
+.title {
+    color: purple; /* Specific color for the paragraph text */
+}

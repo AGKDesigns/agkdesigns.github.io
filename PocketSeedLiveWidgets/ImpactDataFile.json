@@ -11,7 +11,8 @@
         "id": "company2",
         "widgetData": {
           "title": "Title of Company Two",
-          "content": "Content about Company Two"
+          "content": "Content about Company Two",
+          "info": "Some other nice info"
         }
       }
     ]
