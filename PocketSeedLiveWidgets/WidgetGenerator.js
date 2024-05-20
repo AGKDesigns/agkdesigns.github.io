@@ -56,7 +56,9 @@ function loadWidget(companyId) {
             textContainer.appendChild(content);
             textContainer.appendChild(info);
             
-            
+            anchor.appendChild(imgContainer);
+            anchor.appendChild(textContainer);
+
             //Add entire widget to page
             document.body.appendChild(widget);
             
