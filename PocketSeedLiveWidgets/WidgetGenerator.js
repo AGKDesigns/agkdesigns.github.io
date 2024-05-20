@@ -24,7 +24,9 @@ function loadWidget(companyId) {
             anchor.style.width = '100%';   /* Ensures it spans the full width of its container */
             anchor.style.height = '100%';  /* Ensures it spans the full height of its container */
             
-            
+            const contentWrapper = document.createElement('div');
+            contentWrapper.className = 'contentWrapper';
+            contentWrapper.style = 'background-color: red';
 
             const imgContainer = document.createElement('div');
             imgContainer.className = 'imgContainer';
@@ -48,8 +50,9 @@ function loadWidget(companyId) {
 
             // assemble the widget
            widget.appendChild(anchor);
-           anchor.appendChild(imgContainer);
-            anchor.appendChild(textContainer);
+           anchor.appendChild(contentWrapper)
+           contentWrapper.appendChild(imgContainer);
+           contentWrapper.appendChild(textContainer);
             imgContainer.appendChild(img);
             textContainer.appendChild(title);
             textContainer.appendChild(content);
