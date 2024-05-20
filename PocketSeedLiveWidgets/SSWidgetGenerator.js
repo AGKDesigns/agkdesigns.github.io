@@ -30,6 +30,7 @@ function loadWidget(companyId) {
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
+            title.style.color = '#0ff';
 
             const content = document.createElement('p');
             content.textContent = companyData.widgetData.content;
