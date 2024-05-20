@@ -14,6 +14,7 @@ function loadWidget(companyId) {
             const widget = document.createElement('div');
             widget.style.padding = '10px';
             widget.style.margin = '10px';
+            widget.style.maxWidth = '300px';
             widget.style.border = '1px solid #ccc';
             widget.style.borderRadius = '5px';
             widget.style.backgroundColor = '#f9f9f9';
@@ -30,7 +31,6 @@ function loadWidget(companyId) {
 
             const title = document.createElement('h2');
             title.textContent = companyData.widgetData.title;
-            title.style.color = '#0ff';
 
             const content = document.createElement('p');
             content.textContent = companyData.widgetData.content;
