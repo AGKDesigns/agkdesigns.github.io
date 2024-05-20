@@ -19,7 +19,13 @@ function loadWidget(companyId) {
             widget.style.backgroundColor = '#f9f9f9';
             widget.style.color = '#333';
             widget.style.fontFamily = 'Arial, sans-serif';
-            
+        
+
+            const imgContainer = document.createElement('div');
+            imgContainer.className = 'imgContainer';
+
+            const textContainer = document.createElement('div');
+            textContainer.className = 'textContainer';
             
 
             const title = document.createElement('h2');
