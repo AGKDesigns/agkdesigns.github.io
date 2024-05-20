@@ -37,11 +37,16 @@ function loadWidget(companyId) {
 
 
 
-            widget.appendChild(title);
-            widget.appendChild(content);
-            widget.appendChild(img);
+            widget.appendChild(imgContainer);
+            widget.appendChild(textContainer);
+            imgContainer.appendChild(img);
+            textContainer.appendChild(title);
+            textContainer.appendChild(content);
+            textContainer.appendChild(info);
+            
+            
 
-            document.getElementById('custom-widget-container').appendChild(widget);
+            document.body.appendChild(widget);
         })
         .catch(error => console.error('Error loading the data:', error));
     })
