@@ -16,6 +16,12 @@ function loadWidget(companyId) {
             const widget = document.createElement('div');
             widget.className = 'widget';
 
+            const anchor = document.createElement('a');
+            anchor.href = 'https://www.example.com';  // Set the URL where you want users to be directed when they click the widget.
+            anchor.style.textDecoration = 'none'; // Removes underline from all text within the anchor.
+            anchor.target = '_blank';  // Opens the link in a new tab.
+
+
             const imgContainer = document.createElement('div');
             imgContainer.className = 'imgContainer';
 
@@ -36,6 +42,8 @@ function loadWidget(companyId) {
             img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; 
             img.alt = 'Descriptive text';
 
+            // assemble the widget
+            widget.appendChild(anchor);
             widget.appendChild(imgContainer);
             widget.appendChild(textContainer);
             imgContainer.appendChild(img);
@@ -44,7 +52,7 @@ function loadWidget(companyId) {
             textContainer.appendChild(info);
             
             
-
+            //Add entire widget to page
             document.body.appendChild(widget);
             
         })
