@@ -35,6 +35,9 @@ function loadWidget(companyId) {
             content.textContent = companyData.widgetData.content;
             content.style.color = 'blue'; // Specific color for the paragraph text
 
+            const info = document.createElement('p');
+            info.textContent = companyData.widgetData.info;
+
             const img = document.createElement('img');
             img.src = 'https://agkdesigns.github.io/PocketSeedLiveWidgets/PocketSeedLogo.png'; // Replace with your image URL
             img.alt = 'Descriptive text'; // Alternative text for the image
