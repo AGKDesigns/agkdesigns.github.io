@@ -24,11 +24,6 @@ function loadWidget(companyId) {
             anchor.style.width = '100%';   /* Ensures it spans the full width of its container */
             anchor.style.height = '100%';  /* Ensures it spans the full height of its container */
             
-        
-            
-
-            const contentWrapper = document.createElement('div');
-            contentWrapper.className = 'contentWrapper';
             
 
             const imgContainer = document.createElement('div');
@@ -52,8 +47,7 @@ function loadWidget(companyId) {
             img.alt = 'Descriptive text';
 
             // assemble the widget
-           widget.appendChild(contentWrapper);
-           contentWrapper.appendChild(anchor);
+           widget.appendChild(anchor);
            anchor.appendChild(imgContainer);
             anchor.appendChild(textContainer);
             imgContainer.appendChild(img);
